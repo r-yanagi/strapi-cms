@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": "Problem-solving articles linking to RYC products"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title_ja": {
+      "type": "string",
+      "required": true
+    },
+    "title_en": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title_en",
+      "required": true
+    },
+    "excerpt_ja": {
+      "type": "text"
+    },
+    "excerpt_en": {
+      "type": "text"
+    },
+    "problem_ja": {
+      "type": "richtext"
+    },
+    "problem_en": {
+      "type": "richtext"
+    },
+    "solution_ja": {
+      "type": "richtext"
+    },
+    "solution_en": {
+      "type": "richtext"
+    },
+    "body_ja": {
+      "type": "richtext"
+    },
+    "body_en": {
+      "type": "richtext"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "related_product_slugs": {
+      "type": "json"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["app", "game", "tool", "service"],
+      "required": true
+    },
+    "tags": {
+      "type": "json"
+    },
+    "seo_description_ja": {
+      "type": "text"
+    },
+    "seo_description_en": {
+      "type": "text"
+    }
+  }
+}
